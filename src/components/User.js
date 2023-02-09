@@ -1,6 +1,18 @@
 import React,{useState} from "react";
-export default function User({settitle,setdescr,setrating,setimage,title,descr,rating,handleclick}){
+export default function User({settitle,setdescr,setrating,title,descr,rating,setimagefile,handleclick}){
     const [show,setshow] = useState(false);
+    const [file,setfile] = useState("");
+    console.log(file);
+    function handleimage(e){
+       e.preventDefault();
+       let reader = new FileReader();
+       let file = e.target.files[0];
+       reader.onloadend = () => {
+        setfile(file);
+        setimagefile(reader.result);
+       }
+       reader.readAsDataURL(file);
+    } 
     function AddMovie(){
           return(
             <div className="ml-5 mt-5">
@@ -9,8 +21,9 @@ export default function User({settitle,setdescr,setrating,setimage,title,descr,r
                 <input value={descr} onChange={(e)=>setdescr(e.target.value)} placeholder="Enter Description" required></input>
                 <input value={rating} onChange={(e)=>setrating(e.target.value)} placeholder="Enter Raring" required></input>
                 <label htmlFor="img" >Upload Image</label>
-                <input className="hidden" type="file" id="img" name="img" onChange={(e)=>setimage(e.target.files[0])}  accept="image/*"></input>
+                <input className="hidden" type="file" id="img" name="img" onChange={(e)=>handleimage(e)}  accept="image/*"></input>
                 <button className="ml-8 w-32 bg-red-500 rounded text-gray-50" type="submit" onClick={handleclick}>Valider</button>
+                
             </div>
           )
     }

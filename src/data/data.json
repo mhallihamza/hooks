@@ -1,0 +1,42 @@
+[
+    {
+        "id" : 0,
+        "title" : "Avatar: The Way of Water",
+        "image" : "../images/avatar.jpg",
+        "video" : "https://www.youtube.com/embed/598NnroP42s",
+        "descr" : "Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their home.",
+        "rating" : 8.9
+    },
+    {
+        "id" : 1,
+        "title" : "Samaritan",
+        "image" : "../images/samaritan.jpg",
+        "video" : "https://www.youtube.com/embed/9FKnTxSC16E",
+        "descr" : "A young boy learns that a superhero who was thought to have died after an epic battle twenty-five years ago may in fact still be alive.",
+        "rating" : 5.7
+    },
+    {
+        "id" : 2,
+        "title" : "The Crooked Man",
+        "image" : "../images/crooked.jpg",
+        "video" : "https://www.youtube.com/embed/LKrcDYvwV1Q",
+        "descr" : "Singing a nursery rhyme summons a demonic figure known as the Crooked Man. Once you sing the rhyme, everyone in the house is cursed to die by his hands.",
+        "rating" : 3.7
+    },
+    {
+        "id" : 3,
+        "title" : "Plane",
+        "image" : "../images/plane.jpg",
+        "video" : "https://www.youtube.com/embed/M25zXBIUVr0",
+        "descr" : "A pilot finds himself stuck in a war zone after he is forced to crash-land his commercial jet during a terrible storm.",
+        "rating" : 4.8
+    },
+    {
+        "id" : 4,
+        "title" : "Pelé",
+        "image" : "../images/pele.jpg",
+        "video" : "https://www.youtube.com/embed/KMyUnyxVB9Q",
+        "descr" : "Against the backdrop of a turbulent era in Brazil, this documentary captures Pelé’s extraordinary path from breakthrough talent to national hero.",
+        "rating" : 9.7
+    }
+]
