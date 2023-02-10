@@ -1,9 +1,8 @@
-import React,{useState} from "react";
-import MovieCard from "./MovieCard";
-import Filter from './Filter';
-import User from './User';
-import Movies from "../data/data.json"
-function MovieList(){
+import React,{useState} from "react"
+import MovieCard from "./MovieCard"
+import Filter from './Filter'
+import User from './User'
+function MovieList({data,setdata}){
     const [search,setsearch] = useState("");
     const [min,setmin] = useState("");
     const [max,setmax] = useState("");
@@ -12,9 +11,10 @@ function MovieList(){
     const [rating,setrating] = useState("");
     const [imagefile,setimagefile] = useState("");
     const [image,setimage] = useState("");
-    const [add,setadd] = useState(Movies);
+    let id = 5;
     function handleclick(){
-        setadd([...add,{title,image:imagefile,descr,rating}]);
+        setdata([...data,{id,title,image:imagefile,descr,rating}]);
+        id++;
         settitle("");
         setdescr("");
         setrating("");
@@ -26,7 +26,7 @@ function MovieList(){
             <Filter setsearch = {setsearch} setmax={setmax} setmin={setmin} search={search} max={max} min={min} />
                 <div className="mt-5 ml-5">
                 {
-                    add
+                    data
                     .filter(movie=>{return (search.toLowerCase()==='' ? movie : movie.title.toLowerCase().includes(search))})
                     .filter(movie=>{return (min==="" || max==="" ? movie : movie.rating>min && movie.rating<max)})
                     .map(movie => <div key={movie.id}><MovieCard 
